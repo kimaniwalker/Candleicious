@@ -61,6 +61,7 @@ export async function POST(request: NextRequest) {
 
 
     try {
+        console.log({ body })
         const session = await stripe.checkout.sessions.create(body)
         return NextResponse.json(session.url);
 
