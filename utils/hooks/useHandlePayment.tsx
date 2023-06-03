@@ -60,12 +60,14 @@ function formatLineItems(cart: CartList) {
 function calculateTotal(cart: CartList) {
     let total = 0;
 
-    for (let i = 0; i < cart.length; i++) {
-        const item = cart[i];
-        const price = item.price;
-        const quantity = item.qty;
+    if (cart.length >= 1) {
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+            const price = item.price;
+            const quantity = item.qty;
 
-        total += price * quantity;
+            total += price * quantity;
+        }
     }
 
     return round(total, 2);
