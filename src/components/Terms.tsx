@@ -37,7 +37,7 @@ export default function Terms() {
 
             <Title>Shipping and Delivery:</Title>
             <ol>
-                <ListItem>Candleicious ships to the address provided by the customer during the ordering process. It is the customer's
+                <ListItem>Candleicious ships to the address provided by the customer during the ordering process. It is the customer`s
                     responsibility to ensure the accuracy of the shipping information.</ListItem>
                 <ListItem>Shipping costs, if applicable, will be displayed during the checkout process. Any additional customs duties,
                     taxes, or fees imposed by the destination country are the responsibility of the customer.</ListItem>

@@ -20,27 +20,27 @@ export default function Affiliates() {
                 embark on a rewarding journey where you can earn money while spreading the enchantment of our artisanal candles!
             </Description>
 
-            <Description>As a Candleicious Affiliate, you'll have the opportunity to earn up to 10% commission on each sale made using
+            <Description>As a Candleicious Affiliate, you`ll have the opportunity to earn up to 10% commission on each sale made using
                 your
-                unique affiliate code. Imagine, a $100 sale could earn you $10! It's a fantastic way to turn your love for
+                unique affiliate code. Imagine, a $100 sale could earn you $10! It`s a fantastic way to turn your love for
                 candles
                 into a lucrative venture.
             </Description>
 
-            <Description>But that's not all – our Affiliate Program comes with exciting perks. When your affiliate code is used five
+            <Description>But that`s not all – our Affiliate Program comes with exciting perks. When your affiliate code is used five
                 times,
-                you'll receive a featured candle, handpicked by our experts, delivered right to your doorstep each month.
+                you`ll receive a featured candle, handpicked by our experts, delivered right to your doorstep each month.
                 Experience the delight of discovering new scents and indulging in the ambiance of our exquisite creations.
             </Description>
 
             <Description>Joining our Affiliate Program is simple. Just sign up, receive your personalized affiliate code, and share it
                 with
-                your friends, family, and followers. As they embrace the enchantment of Candleicious, you'll earn commissions
+                your friends, family, and followers. As they embrace the enchantment of Candleicious, you`ll earn commissions
                 and
                 unlock incredible rewards along the way.
             </Description>
 
-            <Description>Don't miss out on this exceptional opportunity to be part of the Candleicious family, where your passion for
+            <Description>Don`t miss out on this exceptional opportunity to be part of the Candleicious family, where your passion for
                 candles
                 can ignite a rewarding and fulfilling journey. Join our Affiliate Program today and let your love for candles
                 shine
@@ -48,7 +48,7 @@ export default function Affiliates() {
             </Description>
 
             <Description>To become a Candleicious Affiliate and start earning, visit our website or reach out to our team at [affiliate
-                contact information]. We can't wait to welcome you to our affiliate community!
+                contact information]. We can`t wait to welcome you to our affiliate community!
             </Description>
 
             <Description>Illuminate your world,</Description>
