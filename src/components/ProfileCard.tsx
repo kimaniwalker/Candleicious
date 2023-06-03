@@ -36,7 +36,7 @@ export default function ProfileCard({ type, profileData }: ProfileProps) {
             customer_id: profileData?.userData?.customer_id,
             payment_method_types: ['card', 'cashapp'],
             metadata: { 'orderid172': 'testien' },
-            cancel_url: 'http://localhost:3000/auth/profile',
+            cancel_url: `${process.env.NEXT_PUBLIC_DOMAIN}/auth/profile`,
             line_items: [
                 { price: process.env.NEXT_PUBLIC_STRIPE_MONTHLY, quantity: 1 },
             ],

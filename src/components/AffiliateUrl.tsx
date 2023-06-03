@@ -11,7 +11,7 @@ export default function AffiliateUrl() {
     const { userData } = useUserContext()
     const handleCopy = () => {
         setCopied(true)
-        navigator.clipboard.writeText(`http://localhost:3000/?affiliateCode=${userData.userData.account_id}`);
+        navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_DOMAIN}/?affiliateCode=${userData.userData.account_id}`);
     }
     const [copied, setCopied] = React.useState(false)
     if (copied) return (

@@ -40,7 +40,7 @@ export default function Login() {
         return (
             <Wrapper>
                 <LoginContainer>
-                    <Auth view='sign_in' otpType='sms' magicLink showLinks socialLayout='horizontal' providers={['google', 'facebook', 'apple']} redirectTo="http://localhost:3000/auth/login" supabaseClient={supabase} appearance={{
+                    <Auth view='sign_in' otpType='sms' magicLink showLinks socialLayout='horizontal' providers={['google', 'facebook', 'apple']} redirectTo={`${process.env.NEXT_PUBLIC_DOMIAIN}/auth/login`} supabaseClient={supabase} appearance={{
                         theme: ThemeSupa, style: {
                             button: {
                                 background: `${colors.periwinkle}`,
