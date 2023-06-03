@@ -19,8 +19,9 @@ export default function Checkout() {
     const { cart } = useCartContext()
     const { affiliateCode } = useAffiliateContext()
     const { calculateShipping, calculateTotal, checkout, formatBody } = useHandlePayment()
-    const total = calculateTotal(cart)
-    const shippingTotal = calculateShipping(cart)
+    const userCart = cart ? cart : []
+    const total = calculateTotal(userCart)
+    const shippingTotal = calculateShipping(userCart)
     console.log({ total })
     console.log({ shippingTotal })
     const subtotal = Number(total.toFixed(2)) + Number(shippingTotal.toFixed(2))
