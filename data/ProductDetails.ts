@@ -15,5 +15,19 @@ export const ProductDetails: ProductDetailsArray = [
         description: "A thick rich New York Cheesecake accord with a light graham cracker effect and delicious Blueberries.",
         disclaimer: "Item featured in images are 12oz candles",
         images: ['/products/blueberrycheesecake.png', '/products/blueberry.jpg']
+    },
+    {
+        name: 'Fruity Loops',
+        isAvailable: true,
+        description: "Sweet orange, tangy cherry, sweet vanilla bean with sandalwood.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/fruityloops.jpg', '/products/fruityloops2.jpg']
+    },
+    {
+        name: 'Lemon Poundcake',
+        isAvailable: true,
+        description: "Decadent buttery pound cake laced with tangy lemon zest drizzled with hints of vanilla icing.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/lemonpoundcake.png']
     }
 ]

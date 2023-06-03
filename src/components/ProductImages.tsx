@@ -19,7 +19,7 @@ export default function Productimg({ images }: ImagesProps) {
                 <Col>
                     {images &&
                         <MainContainer>
-                            <Image src={largeImg} alt="product image"
+                            <CustomImage src={largeImg} alt="product image"
                                 fill />
                         </MainContainer>
 
@@ -97,4 +97,7 @@ const MainContainer = styled.div`
     width: 300px;
     object-fit: cover;
   }
+`
+const CustomImage = styled(Image)`
+    object-fit: cover;
 `

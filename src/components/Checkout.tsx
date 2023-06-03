@@ -9,7 +9,7 @@ import { useCartContext } from '../../utils/context/cart'
 import { fetchUserData } from '../../utils/fetchers/fetch'
 import { berkshire, inter, pangolin } from '../../utils/fonts'
 import useHandlePayment from '../../utils/hooks/useHandlePayment'
-import Loading from './Loading'
+
 
 
 
@@ -21,6 +21,8 @@ export default function Checkout() {
     const { calculateShipping, calculateTotal, checkout, formatBody } = useHandlePayment()
     const total = calculateTotal(cart)
     const shippingTotal = calculateShipping(cart)
+    console.log({ total })
+    console.log({ shippingTotal })
     const subtotal = Number(total.toFixed(2)) + Number(shippingTotal.toFixed(2))
     const router = useRouter()
 
@@ -32,7 +34,7 @@ export default function Checkout() {
     }
 
 
-    if (isLoading) return <Loading message='Loading ...' />
+
     return (
         <Wrapper>
             <TotalRow>

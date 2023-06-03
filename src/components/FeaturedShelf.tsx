@@ -15,7 +15,7 @@ export default function FeaturedShelf() {
     }
     const FeaturedItem = getProductDetails(AllProducts[0])
     const handleFeaturedItem = () => {
-        router.push('/products?name=Strawberry Poundcake')
+        router.push('/products?name=Fruity Loops')
     }
 
     return (

@@ -19,7 +19,7 @@ export default function FeaturedThumbnail({ images, name }: ProductThumbnailProp
                 <Card
                     onClick={() => router.push(`/name?name=${name}`)}>
                     <ImageWrapper>
-                        <Image src={productImage} fill alt={name} />
+                        <CustomImage src={productImage} fill alt={name} />
                     </ImageWrapper>
                 </Card>
                 <Name>{name}</Name>
@@ -62,7 +62,7 @@ const ImageWrapper = styled.div`
     width: 225px;
     height: 225px;
     position: relative;
-    object-fit: cover;
+  
     overflow: hidden;
 
     @media(max-width: 768px) {
@@ -74,4 +74,7 @@ const Wrapper = styled.div`
     display: flex;
     margin: 1rem 1rem;
     flex-direction: column;
+`
+const CustomImage = styled(Image)`
+     object-fit: cover;  
 `

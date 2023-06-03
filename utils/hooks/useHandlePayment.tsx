@@ -1,4 +1,5 @@
 import { CartList, CheckoutBody, SingleLineItems } from '../types'
+import { round } from 'lodash'
 
 export default function useHandlePayment() {
     return { checkout, formatMetadata, calculateShipping, calculateTotal, formatBody }
@@ -58,6 +59,7 @@ function formatLineItems(cart: CartList) {
 
 function calculateTotal(cart: CartList) {
     let total = 0;
+
     for (let i = 0; i < cart.length; i++) {
         const item = cart[i];
         const price = item.price;
@@ -65,7 +67,8 @@ function calculateTotal(cart: CartList) {
 
         total += price * quantity;
     }
-    return total;
+
+    return round(total, 2);
 }
 function calculateShipping(cart: CartList) {
     let total = 0
@@ -82,7 +85,7 @@ function calculateShipping(cart: CartList) {
         }
     }
     let shipping = total / 16 + 8
-    return shipping
+    return round(shipping, 2)
 }
 
 function formatBody(cart: CartList, profileData?: any, affiliateCode?: string, total?: number, shipping_total?: number) {
@@ -104,8 +107,8 @@ function formatBody(cart: CartList, profileData?: any, affiliateCode?: string, t
         let orderTotal = total + shipping_total
         console.log({ orderTotal })
         let processing_fee = orderTotal * 0.9
-        console.log({ processing_fee })
-        body['application_fee_amount'] = Number(processing_fee.toFixed(2)) * 100
+        console.log(round(processing_fee, 2))
+        body['application_fee_amount'] = round(processing_fee * 100)
     }
     return body
 }

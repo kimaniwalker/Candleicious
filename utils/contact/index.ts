@@ -225,3 +225,25 @@ export async function NewVipMemberWelcome({ email }: VipWelcomeProps) {
 
 }
 
+export async function sendVipWelcome(body: any) {
+
+    try {
+        const res = await fetch('/api/contact/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body),
+        })
+        if (res.status === 200) {
+            const session = await res.json()
+
+            return session
+        } else {
+            throw new Error(await res.text())
+        }
+    } catch (error) {
+        console.error('An unexpected error happened occurred:', error)
+    }
+}
+
