@@ -30,15 +30,25 @@ export default function ProductDescription({ name, disclaimer, description, size
 const Title = styled.h2`
     font-family: ${inter.style.fontFamily};
     font-size: 48px;
+    @media(max-width: 768px) {
+   text-align: center;
+
+  }
 `
 const Description = styled.p`
    font-family: ${inter.style.fontFamily};
     font-size: 18px; 
     line-height: 1.4;
+
+    @media(max-width: 768px) {
+   text-align: center;
+
+  }
 `
 const Disclaimer = styled.p`
     font-family: ${inter.style.fontFamily};
     font-size: 16px;
     color: red;
+    margin-bottom: 32px;
 `
 

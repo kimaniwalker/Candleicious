@@ -48,7 +48,6 @@ export default function Header() {
                         <Image src="/logo.png" width={75} height={75} alt="logo" />
                     </LogoWrapper>
                     <CartIconWrapper onClick={() => router.push("/cart")}>
-
                         <SvgImage fill={colors.pinkie} stroke='#000' height={64} width={64} />
                         <CartCount><CountText>{cartTotal}</CountText></CartCount>
                     </CartIconWrapper>

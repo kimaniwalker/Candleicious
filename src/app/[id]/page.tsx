@@ -86,6 +86,10 @@ const Content = styled.div`
 display: flex;
 flex-direction: column;
 padding: 1rem;
+@media(max-width: 768px) {
+   align-items: center;
+
+  }
 `
 const Row = styled.div`
     display: flex;
@@ -111,8 +115,8 @@ max-widtH: 300px;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
-  text-transform: 'uppercase'
-
-&:hover {
+  text-transform: 'uppercase';
+  
+  :hover {
     background-color: ${colors.brownie};
-}`;
+  }`

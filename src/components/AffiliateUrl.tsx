@@ -6,12 +6,14 @@ import { pangolin } from '../../utils/fonts';
 
 
 
-export default function AffiliateUrl() {
+export default function AffiliateUrl(data: any) {
+    console.log({ data })
+    console.log(data?.data.userData?.id)
+    console.log(process.env.NEXT_PUBLIC_DOMAIN)
 
-    const { userData } = useUserContext()
     const handleCopy = () => {
         setCopied(true)
-        navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_DOMAIN}/?affiliateCode=${userData.userData.account_id}`);
+        navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_DOMAIN}?affiliateCode=${data.data.userData.account_id}`);
     }
     const [copied, setCopied] = React.useState(false)
     if (copied) return (

@@ -10,6 +10,7 @@ import { styled } from 'styled-components'
 import { fetchUserData } from '../../../../utils/fetchers/fetch'
 import { berkshire, pangolin } from '../../../../utils/fonts'
 import useStripe from '../../../../utils/hooks/useStripe'
+import GetUser from '@/components/GetUser'
 
 
 
@@ -38,7 +39,8 @@ export default function ProfilePage({ }) {
     }
 
     if (isError || error) return <Loading message='Something went wrong' />
-    if (isLoading || !data) return <Loading message="Loading ..." />
+    if (isLoading) return <Loading message="Loading ..." />
+    if (!data) return <GetUser />
     return (
         <>
             <ProfileWrapper>
@@ -75,7 +77,7 @@ export default function ProfilePage({ }) {
                         </AffiliateWrapper>
                         <AffiliateWrapper>
                             <Heading>Affiliate Url</Heading>
-                            <AffiliateUrl />
+                            <AffiliateUrl data={data} />
                             <Description>Thank you for joining our affiliate program. You are now ready to start earning with every purchase made through your unique affiliate link! When you share your affiliate link with potential customers, they can enjoy our exceptional candles while you earn 10% commission on their order as a token of our gratitude. But the benefits don`t stop there! If they sign up for a subscription, you`ll also receive a payment from each invoice, ensuring a continuous stream of earnings. It`s a win-win partnership where you can spread the joy of our candles while earning rewards. Start sharing your affiliate link today and let the rewards roll in!
 
                             </Description>

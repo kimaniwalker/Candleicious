@@ -13,8 +13,8 @@ export async function POST(request: NextRequest) {
         line_items: req.line_items,
         mode: req.mode,
         metadata: req.metadata,
-        success_url: `${process.env.DOMAIN}/payment/success/?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: req.cancel_url || `${process.env.DOMAIN}/cart?canceled=true`,
+        success_url: `${process.env.DOMAIN}payment/success/?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: req.cancel_url || `${process.env.DOMAIN}cart?canceled=true`,
         allow_promotion_codes: true,
         payment_method_types: req.payment_method_types || ['card', 'afterpay_clearpay', 'cashapp', 'klarna'],
         phone_number_collection: {
