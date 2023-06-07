@@ -9,8 +9,12 @@ import { pangolin } from '../../utils/fonts';
 export default function AffiliateUrl(data: any) {
 
     const handleCopy = async () => {
+        const acct_id = data?.data?.userData?.account_id
+        if (acct_id) {
+            await navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_DOMAIN}?affiliateCode=${acct_id}`);
+            console.log('copied' + acct_id)
+        }
         setCopied(true)
-        await navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_DOMAIN}?affiliateCode=${data?.data?.userData?.account_id}`);
     }
     const [copied, setCopied] = React.useState(false)
     if (copied) return (
