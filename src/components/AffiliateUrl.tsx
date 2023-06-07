@@ -23,7 +23,7 @@ export default function AffiliateUrl({ data }: any) {
         </Wrapper>
     )
     return (
-        <Wrapper bg_color={colors.apricot} onClick={handleCopy}>
+        <Wrapper bg_color={colors.aquamarine} onClick={handleCopy}>
             <Description>Click to copy shareable url</Description>
         </Wrapper>
     )
