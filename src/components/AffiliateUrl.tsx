@@ -1,7 +1,7 @@
+"use client"
 import React from 'react'
 import { styled } from 'styled-components';
 import { colors } from '../../utils/colors';
-import { useUserContext } from '../../utils/context/user';
 import { pangolin } from '../../utils/fonts';
 
 
