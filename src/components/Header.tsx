@@ -1,4 +1,3 @@
-'use client';
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../utils/colors'
@@ -45,10 +44,10 @@ export default function Header() {
             <Wrapper>
                 <Content>
                     <LogoWrapper onClick={() => router.push("/")}>
-                        <Image src="/logo.png" width={75} height={75} alt="logo" />
+                        <Image src="/logo.png" width={50} height={50} alt="logo" />
                     </LogoWrapper>
                     <CartIconWrapper onClick={() => router.push("/cart")}>
-                        <SvgImage fill={colors.pinkie} stroke='#000' height={64} width={64} />
+                        <SvgImage fill={colors.pinkie} stroke='#000' height={50} width={50} />
                         <CartCount><CountText>{cartTotal}</CountText></CartCount>
                     </CartIconWrapper>
                 </Content>
@@ -59,32 +58,29 @@ export default function Header() {
 }
 
 const Wrapper = styled.section`
-    min-height: 150px;   
-    background-color: ${colors.brownie}; 
+    min-height: 50px;   
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px;
     background: rgb(255,170,171);
-background: radial-gradient(circle, rgba(255,170,171,1) 6%, rgba(199,210,255,1) 99%);
+    background: radial-gradient(circle, rgba(255,170,171,1) 6%, rgba(199,210,255,1) 99%);
     `
 const Content = styled.div`
-flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 1280px;
-
     width: 100%;
     display: flex;
     justify-content: space-between;
 `
 
 const PromoBannerWrapper = styled.div`
-    min-height: 25px;
+   
     padding: 8px;
-    background-color: ${colors.periwinkle};
     display: flex;
     justify-content: center;
     background: rgb(255,170,171);
-background: radial-gradient(circle, rgba(255,170,171,1) 6%, rgba(199,210,255,1) 99%);
+    background: radial-gradient(circle, rgba(255,170,171,1) 6%, rgba(199,210,255,1) 99%);
    
 `
 const PromoText = styled.p`
@@ -95,27 +91,26 @@ const PromoText = styled.p`
     margin: 0;
 `
 
-const CartIcon = styled(SvgImage)`
-`
-const CartIconWrapper = styled.div`
-position: relative;
-padding: 16px;
 
-:hover{
-    cursor: pointer;
-}
+const CartIconWrapper = styled.div`
+    position: relative;
+    padding: 16px;
+
+    :hover{
+        cursor: pointer;
+    }
 `
 const CartCount = styled.div`
     position: absolute;
     background-color: black;
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -5px;
-    left: 55px;
+    top: 5px;
+    left: 45px;
 `
 const LogoWrapper = styled.div`
     :hover {

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, createContext, useRef } from "react";
 import { storeValue } from "../hooks/useLocalStorage";
-import { ProductItem } from "../types";
+import { CartList, ProductItem } from "../types";
 
 
 interface CartProviderProps {
@@ -15,7 +15,7 @@ export const CartContext = createContext({
         price: 8.99,
         qty: 1
     }],
-    setCart: (value: any) => { },
+    setCart: (value: CartList) => { },
     addToCart: (product: ProductItem) => { },
     changeQty: (name: string, qty: number, size: string) => { },
     clearCartItems: () => { },
@@ -24,7 +24,7 @@ export const CartContext = createContext({
 
 export const CartWrapper = ({ children }: CartProviderProps) => {
 
-    const [cart, setCart] = useState<any>(() => getInitialValue())
+    const [cart, setCart] = useState<CartList>(() => getInitialValue())
     const [counter, setCounter] = useState(0)
 
 
@@ -53,13 +53,13 @@ export const CartWrapper = ({ children }: CartProviderProps) => {
 
 
 
-    function addToCart(product: ProductItem): void {
+    function addToCart(product: ProductItem) {
 
-        setCart((prev: any) => {
+        setCart((prev: CartList) => {
             const existing = cart.find((item: ProductItem) => item.name === product.name && item.size === product.size);
 
             return existing
-                ? [...cart.map((item: any) => item.name === product.name && product.size === item.size
+                ? [...cart.map((item: ProductItem) => item.name === product.name && product.size === item.size
                     ? { ...item, qty: item.qty + 1 }
                     : item,
                 ),
@@ -70,7 +70,7 @@ export const CartWrapper = ({ children }: CartProviderProps) => {
 
 
     }
-    function changeQty(name: string, qty: number, size: string): void {
+    function changeQty(name: string, qty: number, size: string) {
         if (qty === 0) return removeCartItem(name, size)
 
         setCart((prev: any) => [
@@ -81,12 +81,12 @@ export const CartWrapper = ({ children }: CartProviderProps) => {
         return
     }
 
-    function clearCartItems(): void {
+    function clearCartItems() {
         setCart([])
         return cart;
     }
 
-    function removeCartItem(name: string, size: string): void {
+    function removeCartItem(name: string, size: string) {
 
         const result = cart.filter((cartItem: { name: string, size: string }) => cartItem.name !== name)
 

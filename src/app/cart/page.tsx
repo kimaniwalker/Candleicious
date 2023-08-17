@@ -16,7 +16,7 @@ export default function CartPage() {
         <>
             <Wrapper>
                 <div>
-                    {cart?.map((item: any) => (
+                    {cart?.map((item: ProductItem) => (
                         <CartItem key={item.name} {...item} />
                     ))}
 

@@ -1,4 +1,4 @@
-import { Roboto, Inter, Berkshire_Swash, Pangolin } from '@next/font/google';
+import { Roboto, Inter, Berkshire_Swash, Pangolin, Tourney } from '@next/font/google';
 
 export const roboto = Roboto({
     // Specifying weight is only required for
@@ -32,6 +32,13 @@ export const pangolin = Pangolin({
     // non-variable fonts.
     weight: ['400'],
     subsets: ['latin'],
+    display: 'swap',
+    style: ['normal']
+})
+
+export const tourney = Tourney({
+    weight: ['400', '100', '300', '900'],
+    subsets: ['latin', ],
     display: 'swap',
     style: ['normal']
 })

@@ -49,7 +49,7 @@ export default function ProductShelf() {
                     </Title>
                 </ProductRow>
                 <ProductRow>
-                    {AllProducts.map(product => {
+                    {AllProducts.slice(0, 8).map(product => {
                         const details = getProductDetails(product)
                         return <ProductThumbnail key={details[0].name} name={details[0].name} images={details[0].images} />
                     })}
@@ -58,7 +58,7 @@ export default function ProductShelf() {
                 <FeaturedShelf />
                 <ProductAd2 />
                 <ProductRow>
-                    {AllProducts.map(product => {
+                    {AllProducts.slice(0, 8).map(product => {
                         const details = getProductDetails(product)
                         return <ProductThumbnail key={details[0].name} name={details[0].name} images={details[0].images} />
                     })}

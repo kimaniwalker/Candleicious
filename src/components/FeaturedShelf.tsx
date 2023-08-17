@@ -5,10 +5,11 @@ import { styled } from 'styled-components'
 import { Featured } from '../../data/Featured'
 import { ProductDetails } from '../../data/ProductDetails'
 import FeaturedThumbnail from './FeaturedThumbnail'
+import { SeductionLineProducts } from '../../data/Products'
 
 export default function FeaturedShelf() {
 
-    const AllProducts = Featured.name
+    const AllProducts = SeductionLineProducts.name
     const router = useRouter()
     const getProductDetails = (product: string) => {
         return ProductDetails.filter(item => item.name === product)
@@ -28,7 +29,7 @@ export default function FeaturedShelf() {
                 </LargeCol>
                 <LargeCol>
                     <ProductCol>
-                        {AllProducts.slice(1, 5).map(product => {
+                        {AllProducts.slice(0, 4).map(product => {
                             const details = getProductDetails(product)
                             return <FeaturedThumbnail key={details[0].name} name={details[0].name} images={details[0].images} />
                         })}

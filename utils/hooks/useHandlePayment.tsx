@@ -28,7 +28,7 @@ async function checkout(body: any) {
 }
 
 function formatMetadata(cart: CartList) {
-    let metaData: any = {}
+    let metaData: Record<string, string> = {}
     for (let i = 0; i < cart.length; i++) {
         const item = cart[i]
         metaData[item.name] = `${item.size} - x ${item.qty}`
@@ -93,7 +93,7 @@ function calculateShipping(cart: CartList) {
 function formatBody(cart: CartList, profileData?: any, affiliateCode?: string, total?: number, shipping_total?: number) {
     const metadata = formatMetadata(cart)
     const line_items = formatLineItems(cart)
-    let body: any = {
+    let body: Record<string, any> = {
         mode: 'payment',
         line_items,
         metadata

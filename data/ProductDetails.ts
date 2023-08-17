@@ -72,4 +72,32 @@ export const ProductDetails: ProductDetailsArray = [
         disclaimer: "Candle featured in product images are 12oz",
         images: ['/products/coconut_lime.png']
     },
+    {
+        name: 'Sex On The Beach',
+        isAvailable: true,
+        description: "This aroma is of the islands with a woodsy  bold  scent with notes of leather, tobacco, amber and musk with a spicy mixture of black tea and pepper.   Masculine scent with base note of aged teakwood on a bed of  patchouli and sandalwood. A scent you will love and it will be a favorite for your customers.  Delightful.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/sexOnTheBeach.png']
+    },
+    {
+        name: 'Foreplay',
+        isAvailable: true,
+        description: "Goodness Gracious! is a elegant and romantic fragrance with top notes of green and fresh citrus, middle notes of summer florals including jasmine and lily, and bottom notes of woody musk & earthy amber. This is our interpretation of a Sweet Grace Type fragrance oil. We are not affiliated in any way with Bridgewater Candle Company, which owns the registered trademark for Sweet Grace.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/Foreplay.png']
+    },
+    {
+        name: 'Sixty Nine',
+        isAvailable: true,
+        description: "Top notes of green citrus and fruit are paired with the sweet florals of jasmine, rose and lilly, anchored by sweet woody base notes.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/SixtyNine.png']
+    },
+    {
+        name: 'Quickie',
+        isAvailable: true,
+        description: "A Butt Naked Type loaded with Strawberries, Coconut, Bananas, Cucumber & Vanilla.",
+        disclaimer: "Candle featured in product images are 12oz",
+        images: ['/products/quickie.png']
+    },
 ]
