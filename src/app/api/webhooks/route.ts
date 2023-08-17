@@ -2,11 +2,12 @@ import { NextResponse, NextRequest } from 'next/server';
 import Stripe from 'stripe';
 import { NewOrder } from '../../../../utils/contact';
 import { supabase } from '../../../../utils/hooks/useStripe';
+import { NextApiResponse } from 'next';
 const stripe = new Stripe(process.env.STRIPE_SK!, {
     apiVersion: '2022-11-15',
 });
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest, res: NextApiResponse) {
     try {
         const event = await request.json()
         // Handle the event
@@ -44,13 +45,10 @@ export async function POST(request: NextRequest) {
             default:
                 console.log(`Unhandled event type ${event.type}`);
         }
-
-        // Return a response to acknowledge receipt of the event
-        NextResponse.json({ received: true });
-
+        res.status(200).json({ received: true })
     } catch (error) {
         console.error(error)
-        NextResponse.json({ error })
+        res.status(500).json({ error })
     }
 }
 
