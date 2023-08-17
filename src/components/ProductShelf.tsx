@@ -19,7 +19,7 @@ export default function ProductShelf() {
     }
     const router = useRouter()
     const ProductAd = () => (
-        <ProductRow onClick={() => router.push('/auth/login')}>
+        <ProductRow onClick={() => null}>
             <AdContent>
                 <Description>
                     Join the Candleicious Affiliate Program! Earn up to 10% commission per sale with your unique code. Get a featured candle monthly when your code is used 5 times. Turn your love for candles into a profitable venture. Sign up now!
@@ -28,7 +28,7 @@ export default function ProductShelf() {
         </ProductRow>
     )
     const ProductAd2 = () => (
-        <ProductRow onClick={() => router.push('/auth/login')}>
+        <ProductRow onClick={() => null}>
             <AdContent>
                 <Description>
                     Experience the ultimate candle indulgence with Candleicious VIP Membership! For just $20.99 a month, become a VIP member and receive a handpicked 12oz featured candle delivered straight to your doorstep, allowing you to immerse yourself in captivating scents and elevate your ambiance. Enjoy unparalleled convenience with the ability to pause or cancel your subscription at any time, putting you in control. As a VIP member, you gain access to exclusive deals, discounts, and promotions, ensuring you never miss out on new releases and receiving special perks reserved only for our VIP community. Elevate your candle game and transform your space into a haven of tranquility and beauty by signing up for our VIP program today!

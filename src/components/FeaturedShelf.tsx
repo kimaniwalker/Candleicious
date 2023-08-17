@@ -16,7 +16,7 @@ export default function FeaturedShelf() {
     }
     const FeaturedItem = getProductDetails(AllProducts[0])
     const handleFeaturedItem = () => {
-        router.push('/products?name=Fruity Loops')
+        router.push('/products?name=Foreplay')
     }
 
     return (
@@ -24,7 +24,7 @@ export default function FeaturedShelf() {
             <ProductRow>
                 <LargeCol>
                     <ImageWrapper onClick={handleFeaturedItem}>
-                        <Image fill src="/products/2.png" alt="Featured product" />
+                        <Image fill src="/products/seductioncover.png" alt="Featured product" />
                     </ImageWrapper>
                 </LargeCol>
                 <LargeCol>

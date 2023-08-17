@@ -7,7 +7,7 @@ export const ProductDetails: ProductDetailsArray = [
         isAvailable: true,
         description: "Strawberry Pound Cake BBW Type fragrnace is a luscious blend of summer-sweet berries paired with buttery sponge cake and fresh, rich whipped cream. Top note:candy-like strawberry. Middle notes:sweet cream. Bottom notes: notes of baked vanilla cake and musk.",
         disclaimer: "Item featured in images are 12oz candles",
-        images: ['/products/strawberry_poundcake.png', '/products/strawberry.jpg', '/products/blueberrycheesecake.png', '/products/blueberrycheesecake.png', '/products/strawberry_poundcake.png', '/products/blueberrycheesecake.png', '/products/blueberrycheesecake.png']
+        images: ['/products/strawberry_poundcake.png', '/products/strawberry.jpg',]
     },
     {
         name: 'Blueberry Poundcake',
