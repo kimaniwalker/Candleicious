@@ -45,10 +45,10 @@ export async function POST(request: NextRequest, res: NextApiResponse) {
             default:
                 console.log(`Unhandled event type ${event.type}`);
         }
-        res.status(200).json({ received: true })
+        return NextResponse.json({received: true},{status: 200})
     } catch (error) {
         console.error(error)
-        res.status(500).json({ error })
+        return NextResponse.json({ error },{status: 500})
     }
 }
 
