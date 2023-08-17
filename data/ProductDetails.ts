@@ -35,7 +35,7 @@ export const ProductDetails: ProductDetailsArray = [
         isAvailable: true,
         description: "A sweet fruity fig type with top notes of grapefruit, pear, pineapple, and melon, middle notes of jasmine, gardenia, peach and coconut, with a sugary powdery raspberry and vanilla base note.",
         disclaimer: "Candle featured in product images are 12oz",
-        images: ['/products/coconut_lime.png']
+        images: ['/products/carribeanCoconut.png']
     },
     {
         name: 'Cinnamon Buns',
